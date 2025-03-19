@@ -1,0 +1,25 @@
+html {
+  scroll-behavior: smooth !important;
+  body {
+    font-family: $font-stack;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    &.ovr-hiddn {
+      overflow: hidden !important;
+    }
+  }
+}
+
+
+h1 {
+  color: $primary-color;
+}

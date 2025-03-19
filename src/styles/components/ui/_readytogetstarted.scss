@@ -1,0 +1,38 @@
+.card {
+  &.ready {
+    background: #fc8704;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 11px;
+    border-radius: 20px;
+    h6 {
+      font-size: 38px;
+      line-height: 44px;
+      font-family: "Exo 2";
+      font-weight: 600;
+    }
+    p {
+      font-family: "Exo 2";
+    }
+
+    button {
+      width: 63%;
+      height: 38px;
+      border-radius: 8px;
+      border: none;
+      background: #000000;
+      color: #fff;
+      outline: none;
+      letter-spacing: 1px;
+      transition: 0.3s;
+      &:hover {
+        border: none;
+        background: #3b8ee8;
+        color: #fff;
+        outline: none;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

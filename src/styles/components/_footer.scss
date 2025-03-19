@@ -1,0 +1,152 @@
+.container {
+  &.footer-style {
+    padding-top: 110px;
+    img {
+      width: 250px;
+    }
+    h6 {
+      color: #fc8704;
+      font-size: 20px;
+      font-family: "Exo 2";
+      font-weight: 600;
+    }
+    p {
+      color: #ffffff;
+      font-size: 15px;
+      font-family: "Exo 2";
+      font-weight: 400;
+      cursor: pointer;
+      transition: 0.3s;
+      line-height: 23px;
+    }
+    ul {
+      padding: 0 0px;
+      list-style: none;
+      li {
+        color: #fff;
+        font-size: 15px;
+        font-family: "Exo 2";
+        line-height: 35px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          color: #fc8704;
+        }
+        a {
+          color: #fff;
+          font-size: 15px;
+          font-family: "Exo 2";
+          line-height: 35px;
+          font-weight: 400;
+          text-decoration: none;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            color: #fc8704;
+          }
+        }
+      }
+    }
+    button {
+      width: 50%;
+      height: 43px;
+      border-radius: 8px;
+      border: none;
+      background: #fc8704;
+      color: #fff;
+      outline: none;
+      letter-spacing: 1px;
+      transition: 0.3s;
+      font-family: "Exo 2";
+      &:hover {
+        background: #3b8ee8;
+      }
+    }
+    input {
+      width: 100%;
+      height: 48px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: #fff;
+      outline: none;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      padding: 4px 11px;
+      border: 1px solid #676767;
+    }
+  }
+}
+
+.copy-right {
+  margin-top: 49px;
+  h6 {
+    color: #fff !important;
+    font-size: 15px;
+    font-family: "Exo 2";
+    font-weight: 400;
+    text-align: center;
+  }
+  span {
+    color: #fc8704;
+  }
+  p {
+    font-size: 15px;
+    font-family: "Exo 2";
+    line-height: 24px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    color: #ffffff45;
+    margin-top: 26px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-style {
+    padding-top: 0px;
+  }
+
+  .copy-right {
+    h6 {
+      color: #fff !important;
+      font-size: 12px;
+      font-family: "Exo 2";
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  .copy-right {
+    p {
+      font-size: 13px;
+      font-family: "Exo 2";
+      line-height: 17px;
+      font-weight: 300;
+      cursor: pointer;
+      transition: 0.3s;
+      text-align: center;
+      color: #ffffff8a;
+      margin-top: 13px;
+    }
+  }
+}
+
+.address {
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+}
+
+.address {
+    a {
+      &:hover {
+        p {
+          color: #fc8704;
+        }
+      }
+    }
+}

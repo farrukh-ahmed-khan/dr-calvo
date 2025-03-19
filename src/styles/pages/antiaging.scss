@@ -1,0 +1,147 @@
+.all-services-section {
+  background: linear-gradient(0deg, #131319, rgb(11 11 14));
+  height: 535px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  h6 {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    font-family: "Exo 2";
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 60px;
+    span {
+      color: #fc8704;
+      font-weight: 300;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    font-family: "Exo 2";
+    font-weight: 300;
+  }
+  button {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background: #fc8704;
+    color: #fff;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-family: "Exo 2";
+    font-size: 15px;
+    &:hover {
+      background: #3b8ee8;
+    }
+  }
+}
+
+.global-service {
+  h6 {
+    text-align: left;
+    color: #fc8704;
+    font-family: "Exo 2";
+    margin-top: 20px;
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 300;
+  }
+}
+
+.card.sec-toper {
+  &.global-service {
+    background: transparent;
+    border: 1px solid rgba(239, 240, 246, 0.16);
+    border-radius: 20px;
+    padding: 0px 17px;
+    p {
+      text-align: left;
+      font-size: 16px;
+      color: #fff;
+      position: relative;
+      font-family: "Exo 2";
+      font-weight: 300;
+      margin-bottom: 4px;
+    }
+    ul {
+      list-style: none;
+      padding: 0px 0px;
+      li {
+        text-align: left;
+        font-size: 14px;
+        color: #fff;
+        position: relative;
+        font-family: "Exo 2";
+        font-weight: 300;
+        line-height: 43px;
+        img {
+          width: 24px;
+          margin-right: 10px;
+          position: relative;
+          top: -1px;
+        }
+        span {
+          font-weight: 700;
+          a {
+            &:active {
+              outline: 0;
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.benefits-heading {
+  h5 {
+    text-align: center;
+    color: #fc8704;
+    position: relative;
+    font-family: "Exo 2";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+.row {
+  &.benefits-wrap {
+    h6 {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 25px;
+        font-family: "Exo 2";
+        color: #3c90ea;
+      }
+    p {
+        text-align: left;
+        font-size: 16px;
+        color: #fff;
+        position: relative;
+        font-family: "Exo 2";
+        font-weight: 300;
+        margin-bottom: 4px;
+      }
+    .card {
+      background: transparent;
+      background: transparent;
+      border: 1px solid rgba(239, 240, 246, 0.16);
+      border-radius: 20px;
+      padding: 17px 17px;
+    }
+  }
+}
+

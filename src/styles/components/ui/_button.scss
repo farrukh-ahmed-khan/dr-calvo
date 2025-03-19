@@ -1,0 +1,30 @@
+.login-btn {
+    width: 224px;
+    height: 43px;
+    border-radius: 8px;
+    border: none;
+    background: #fc8704;
+    color: #fff;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    font-family: "Exo 2";
+    font-size: 1.5vh;
+    &:hover {
+        background: #000;
+        color: #fc8704;
+        font-family: 'Josefin Sans';
+        border: 1px solid #000000;
+        transform: scale(1.03);
+    }
+    svg {
+        position: relative;
+        top: -4px;
+    }
+}
+
+
+.accounts-wrap {
+    display: flex;
+    justify-content: end;
+}
