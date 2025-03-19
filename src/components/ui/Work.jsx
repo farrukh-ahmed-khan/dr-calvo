@@ -5,22 +5,21 @@ const Work = () => {
 
     useEffect(() => {
         if ($(".company-timeline-year").length) {
-            // $(".timeline-date .date").html(function (i, html) {
-            //     const text = (html) || ""; 
+            $(".timeline-date .date").html(function (i, html) {
+                const text = (html) || "";
 
+                const chars = $.trim(text).split("");
+                const new_html = "<span>" + chars.join("</span> <span>") + "</span>";
+                $(this).append(new_html);
+                // return new_html;
+            });
+            // $(".timeline-date .date").html(function (i, html) {
+            //     const text = html || "";
             //     const chars = $.trim(text).split("");
             //     const new_html = "<span>" + chars.join("</span> <span>") + "</span>";
-            //     $(this).append(new_html);
-            //     // return new_html;
+            //     return new_html; // Return the modified HTML
             // });
 
-
-            $(".timeline-date .date").html(function (i, html) {
-                const text = html || "";
-                const chars = $.trim(text).split("");
-                return "<span>" + chars.join("</span> <span>") + "</span>";
-            });
-            
         }
 
         const handleScroll = () => {
