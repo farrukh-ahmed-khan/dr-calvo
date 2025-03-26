@@ -61,7 +61,7 @@ const Work = () => {
 
     return (
         <>
-            <div className="container care-sec" id="how-it-works">
+            <div className="container care-sec" >
                 <div className="row sec-toper">
                     <div className="col-md-12">
                         <h6>How It <span>Works</span></h6>

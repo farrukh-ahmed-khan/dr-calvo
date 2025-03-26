@@ -3,7 +3,7 @@
   padding-top: 5rem;
   .care-sec {
     h6 {
-      text-align: center;
+      // text-align: center;
       color: #fff;
       position: relative;
       font-family: "Exo 2";
@@ -69,6 +69,7 @@
         transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
         transition: transform 0.4s, opacity 0.1s 0.3s;
         transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.4s;
+        border-radius: 26px;
         .newsCaption-content {
           margin: 0;
         }

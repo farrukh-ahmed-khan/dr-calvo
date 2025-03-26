@@ -16,16 +16,11 @@ const Header = () => {
     const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
     const [scrolling, setScrolling] = useState(false);
 
-    const pathname  = usePathname();
+    const pathname = usePathname();
     const router = useRouter();
 
-
     const navbardata = [
-        {
-            id: 1,
-            title: "HOW IT WORKS",
-            link: "#how-it-works",
-        },
+        { id: 1, title: "HOW IT WORKS", link: "#how-it-works" },
         {
             id: 2,
             title: "SERVICES",
@@ -44,45 +39,28 @@ const Header = () => {
             title: "SUPPLEMENTS",
             link: "javascript:void(0);",
             dropdown: [
-                {
-                    name: "NUTRITIONAL FRONTIERS",
-                    link: "/nutrional-frontiers"
-                },
-                {
-                    name: "FULLSCRIPT",
-                    link: "/fullscript"
-                }
+                { name: "NUTRITIONAL FRONTIERS", link: "/nutrional-frontiers" },
+                { name: "FULLSCRIPT", link: "/fullscript" }
             ],
         },
-        {
-            id: 4,
-            title: "MEET DR. R. DAVID CALVO",
-            link: "/meet-dr-calvo",
-        },
+        { id: 4, title: "MEET DR. R. DAVID CALVO", link: "/meet-dr-calvo" },
     ];
 
     useEffect(() => {
         if (typeof window === "undefined") return;
-        const handleScroll = () => {
 
-            if (window.scrollY > 50) {
-                setScrolling(true);
-            } else {
-                setScrolling(false);
-            }
+        const handleScroll = () => {
+            setScrolling(window.scrollY > 50);
         };
 
         window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
         document.body.classList.toggle("ovr-hiddn");
-        document.body.classList.toggle("overflw");
+        // document.body.classList.toggle("overflw");
     };
 
     const handleDropdown = (id: number, open: boolean) => {
@@ -93,22 +71,34 @@ const Header = () => {
         if (typeof window === "undefined") return;
 
         if (link.startsWith("#")) {
-            document.querySelector(link)?.scrollIntoView({ behavior: "smooth" });
+            if (pathname === "/") {
+                document.querySelector(link)?.scrollIntoView({ behavior: "smooth" });
+            } else {
+                router.push(`/${link}`);
+            }
         } else {
-            router.push(link); // Use Next.js client-side navigation instead of window.location
+            router.push(link);
         }
     };
 
-    // const isActive = (link: any) => {
-    //     if (typeof window === "undefined") return false;
-    //     if (link.startsWith("#")) {
 
-    //         return window.location.hash === link;
-    //     } else {
-    //         return currentPath === link;
-    //     }
-    // };
-    const isActive = (link: string) => pathname === link;
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        const hash = window.location.hash;
+        if (hash) {
+            setTimeout(() => {
+                const element = document.querySelector(hash);
+                if (element) element.scrollIntoView({ behavior: "smooth" });
+            }, 200);
+        }
+    }, [pathname]);
+
+    const isActive = (link: string) => {
+        if (link.startsWith("#")) {
+            return typeof window !== "undefined" && window.location.hash === link;
+        }
+        return pathname === link;
+    };
 
     return (
         <div className={`headers-wrapper ${scrolling ? 'header-bg' : ''}`}>
@@ -223,23 +213,23 @@ const Header = () => {
                         <div className="col-lg-6">
                             <div className={`menu ${menuOpen ? "open" : ""}`}>
                                 <ul>
-                                    <li><Link href="/">HOW IT WORKS</Link></li>
-                                    <li><Link href="/meet-dr-calvo">MEET DR. R. DAVID CALVO</Link></li>
+                                    <li onClick={toggleMenu}><Link href="#how-it-works">HOW IT WORKS</Link></li>
+                                    <li onClick={toggleMenu}><Link href="/meet-dr-calvo">MEET DR. R. DAVID CALVO</Link></li>
 
-                                    <li><Link href="#">SERVICES</Link></li>
+                                    <li onClick={toggleMenu}><Link href="#">SERVICES</Link></li>
                                     <div className="mob-li">
-                                        <li><Link href="/human-performance">HUMAN PERFORMANCE</Link></li>
-                                        <li><Link href="/sexual-optimization">SEXUAL OPTIMIZATION</Link></li>
-                                        <li><Link href="/peptide-therapy">PEPTIDE THERAPY</Link></li>
-                                        <li><Link href="/mental-health">MENTAL HEALTH</Link></li>
-                                        <li><Link href="/anti-aging">ANTI-AGING</Link></li>
-                                        <li><Link href="/repair-and-regenerate">REPAIR & REGENERATE</Link></li>
+                                        <li onClick={toggleMenu}><Link href="/human-performance">HUMAN PERFORMANCE</Link></li>
+                                        <li onClick={toggleMenu}><Link href="/sexual-optimization">SEXUAL OPTIMIZATION</Link></li>
+                                        <li onClick={toggleMenu}><Link href="/peptide-therapy">PEPTIDE THERAPY</Link></li>
+                                        <li onClick={toggleMenu}><Link href="/mental-health">MENTAL HEALTH</Link></li>
+                                        <li onClick={toggleMenu}><Link href="/anti-aging">ANTI-AGING</Link></li>
+                                        <li onClick={toggleMenu}><Link href="/repair-and-regenerate">REPAIR & REGENERATE</Link></li>
                                     </div>
 
-                                    <li><Link href="#">AFFILIATES</Link></li>
+                                    <li onClick={toggleMenu}><Link href="#">AFFILIATES</Link></li>
                                     <div className="mob-li">
-                                        <li><Link href="/nutrional-frontiers">NUTRITIONAL FRONTIERS</Link></li>
-                                        <li><Link href="/fullscript">FULLSCRIPT</Link></li>
+                                        <li onClick={toggleMenu}><Link href="/nutrional-frontiers">NUTRITIONAL FRONTIERS</Link></li>
+                                        <li onClick={toggleMenu}><Link href="/fullscript">FULLSCRIPT</Link></li>
                                     </div>
 
 

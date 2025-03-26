@@ -11,7 +11,7 @@ const Contact = () => {
                     <section className="care-wrap">
                         <div className="container care-sec">
                             <div className="row sec-toper">
-                                <div className="col-md-12 mb-4">
+                                <div className="col-md-12 mb-4  pt-5">
                                     <div>
                                         <h6>CONTACT US</h6>
                                     </div>

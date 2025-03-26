@@ -80,11 +80,11 @@ const PeptideTherapy = () => {
                                 <div className="row">
                                     <div className="col-md-2"></div>
                                     <div className="col-md-8">
-                                        <p>Peptide therapy&apos;s versatility is one of its most remarkable features. Different peptides can elicit different responses,
+                                        <p style={{color: "white"}}>Peptide therapy&apos;s versatility is one of its most remarkable features. Different peptides can elicit different responses,
                                             making them a versatile tool for a range of health concerns. Some common applications of peptide therapy include:</p>
                                     </div>
                                     <div className="col-md-2"></div>
-                                </div>
+                                </div> 
                             </div>
                         </div>
                     </div>

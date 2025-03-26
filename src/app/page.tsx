@@ -17,7 +17,7 @@ export default function Home() {
         <Healthcare />
       </section>
 
-      <section className="care-wrap">
+      <section className="care-wrap" id="how-it-works">
         <Work />
       </section>
 
