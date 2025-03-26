@@ -84,7 +84,7 @@ const Footer = () => {
             </div>
 
             <div className="container">
-                <div className="row mt-5">
+                <div className="row">
                     <div className="col-md-12">
                         <div className="copy-right">
                             <h6>Copyright © 2023 <span><Link href="https://payment.texascenterwellness.com/" target="_blank" style={{ color: "#fc8704", textDecoration: "none" }}>Texas Center Wellness</Link></span> | All Rights Reserved</h6>
