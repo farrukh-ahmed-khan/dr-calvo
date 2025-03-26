@@ -27,3 +27,11 @@
 // @import "./pages/home";
 // @import "./pages/about";
 // @import "./pages/products";
+@media (max-width: 786px) {
+  .patient-assessment-body {
+    padding: 10px 15px 18px 55px !important;
+  }
+  .patient-assessment-body::before {
+    top: 42%;
+  }
+}

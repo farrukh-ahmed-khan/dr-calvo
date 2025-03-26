@@ -11,7 +11,7 @@ const MeetDrCalvo = () => {
                 <div>
                     <section className="care-wrap">
                         <div className="container care-sec">
-                            <div className="row sec-toper">
+                            <div className="row sec-toper mt-5">
                                 <div className="col-md-6 mb-4">
                                     <div className="david-img">
                                         <Image src={david} alt="" />

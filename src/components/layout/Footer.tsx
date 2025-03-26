@@ -87,7 +87,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="copy-right">
-                            <h6>Copyright © 2023 <span><Link href="https://payment.texascenterwellness.com/" target="_blank" style={{ color: "#fc8704", textDecoration: "none" }}>Texas Center Wellness</Link></span> | All Rights Reserved</h6>
+                            <h6>Copyright © 2023 <span><a href="https://payment.texascenterwellness.com/" target="_blank" style={{ color: "#fc8704", textDecoration: "none", fontSize: "18px" }}>Texas Center Wellness</a></span> | All Rights Reserved</h6>
                             <p>The information available on this website is provided for informational purposes only. This information is not intended to replace a medical consultation where a physician’s judgment may advise you about specific disorders, conditions, and/or treatment options. We hope the information will be useful for you to become more educated about your health care decisions.</p>
                         </div>
                     </div>

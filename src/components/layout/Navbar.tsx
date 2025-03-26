@@ -226,7 +226,7 @@ const Header = () => {
                                         <li onClick={toggleMenu}><Link href="/repair-and-regenerate">REPAIR & REGENERATE</Link></li>
                                     </div>
 
-                                    <li onClick={toggleMenu}><Link href="#">AFFILIATES</Link></li>
+                                    <li onClick={toggleMenu}><Link href="#">SUPPLEMENTS</Link></li>
                                     <div className="mob-li">
                                         <li onClick={toggleMenu}><Link href="/nutrional-frontiers">NUTRITIONAL FRONTIERS</Link></li>
                                         <li onClick={toggleMenu}><Link href="/fullscript">FULLSCRIPT</Link></li>
